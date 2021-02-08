@@ -75,13 +75,12 @@ describe("2 Testing TaskList...", () => {
     ));
 
   })
-  test("Should filter tasks", () => {
+  test("Should filter tasks by project", () => {
     let myList = new TaskList();
     myList.addTask("Eat Breakfast", moment([2021, 0, 31]), "apple")
     myList.addTask("Eat Breakfast", moment([2021, 0, 31]), "pear")
     myList.addTask("Eat Breakfast", moment([2021, 0, 31]), "banana")
     let newList = myList.filterTasks("project", "apple");
     expect(newList.List.length).toEqual(1);
-
   })
 })
